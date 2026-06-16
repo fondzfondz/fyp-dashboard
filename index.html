@@ -3,101 +3,100 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dashboard FYP Offline</title>
+<title>Dashboard FYP Local</title>
 <style>
-:root{--bg:#0f172a;--card:#111c34;--soft:#1e2a44;--line:#2d3b59;--text:#eef4ff;--muted:#9fb0cf;--gold:#f5c542;--green:#22c55e;--red:#ef4444;--blue:#38bdf8}*{box-sizing:border-box}body{margin:0;font-family:Arial,'Noto Sans Thai',sans-serif;background:linear-gradient(180deg,#08111f,#111827);color:var(--text)}.wrap{max-width:1180px;margin:auto;padding:18px}.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:16px}.brand h1{margin:0;font-size:26px}.brand p{margin:4px 0 0;color:var(--muted)}button,input,select,textarea{font:inherit}button{border:0;border-radius:12px;padding:10px 14px;cursor:pointer;background:var(--gold);color:#111827;font-weight:700}button.secondary{background:#23314f;color:var(--text);border:1px solid var(--line)}button.danger{background:#7f1d1d;color:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}.card{background:rgba(17,28,52,.92);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 10px 24px rgba(0,0,0,.22)}.stat .label{color:var(--muted);font-size:13px}.stat .num{font-size:28px;font-weight:800;margin-top:4px}.main{display:grid;grid-template-columns:360px 1fr;gap:14px}.form label{display:block;margin:10px 0 5px;color:var(--muted);font-size:13px}.form input,.form select,.form textarea{width:100%;background:#0b1221;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:10px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.filters input,.filters select{background:#0b1221;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:9px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}th{text-align:left;color:var(--muted);font-size:12px}tr:hover{background:rgba(255,255,255,.03)}.rank{font-weight:800;color:var(--gold)}.money{font-weight:800}.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#0b1221;border:1px solid var(--line);color:var(--muted);font-size:12px}.progress{height:10px;background:#0b1221;border-radius:99px;overflow:hidden;border:1px solid var(--line);margin-top:6px}.bar{height:100%;background:var(--green);width:0}.small{font-size:12px;color:var(--muted)}.hidden{display:none}.sellerCards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px}.seller h3{margin:0 0 4px}.seller .sub{color:var(--muted);font-size:12px}.seller .amt{font-size:22px;font-weight:900;margin-top:8px}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.main{grid-template-columns:1fr}.sellerCards{grid-template-columns:1fr}}@media(max-width:520px){.wrap{padding:12px}.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}table{font-size:12px}th,td{padding:8px}.brand h1{font-size:22px}}
+:root{--bg:#0f172a;--card:#111827;--soft:#1e293b;--line:#334155;--text:#e5e7eb;--muted:#94a3b8;--gold:#f59e0b;--red:#ef4444;--green:#22c55e}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Thai",sans-serif;background:linear-gradient(180deg,#071226,#0f172a);color:var(--text)}.wrap{max-width:1180px;margin:auto;padding:16px}.hero{background:linear-gradient(135deg,#1e3a8a,#111827);border:1px solid #ffffff1a;border-radius:24px;padding:22px;margin-bottom:14px}h1{margin:0 0 6px;font-size:clamp(25px,5vw,40px)}h2{margin:0 0 12px}.sub,.small{color:var(--muted)}.small{font-size:12px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}.card,.panel{background:#111827cc;border:1px solid #ffffff18;border-radius:18px;padding:15px}.label{color:var(--muted);font-size:13px}.value{font-weight:900;font-size:25px;margin-top:4px}.main{display:grid;grid-template-columns:360px 1fr;gap:14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{display:block;margin:10px 0 5px;color:var(--muted);font-size:13px}input,select,textarea{width:100%;padding:11px;border-radius:12px;border:1px solid #ffffff24;background:#0b1220;color:#fff;font-size:15px}button{border:0;background:var(--gold);color:#111827;border-radius:12px;padding:10px 13px;font-weight:900;cursor:pointer}button.secondary{background:#1e293b;color:#e5e7eb;border:1px solid #ffffff24}button.danger{background:#7f1d1d;color:#fff}.actions,.filters{display:flex;gap:8px;flex-wrap:wrap}.filters{margin-bottom:12px}.note{background:#172554;border:1px solid #3b82f655;color:#dbeafe;padding:12px;border-radius:14px;margin:10px 0}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}button.tab{background:#111827;color:#e5e7eb;border:1px solid #ffffff22}button.tab.active{background:var(--gold);color:#111827}section{display:none}section.active{display:block}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:10px;border-bottom:1px solid #ffffff14;text-align:left;vertical-align:top}th{color:#cbd5e1;background:#ffffff08}td.num,th.num{text-align:right}.rank{font-weight:900;color:#fbbf24}.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#0b1220;border:1px solid #ffffff1f;color:#cbd5e1;font-size:12px}.hidden{display:none}.branch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.seller-row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #ffffff12;padding:9px 0}.seller-row:last-child{border-bottom:0}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.main{grid-template-columns:1fr}.branch-grid{grid-template-columns:1fr}}@media(max-width:560px){.wrap{padding:12px}.grid,.row{grid-template-columns:1fr}table{min-width:650px;font-size:13px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="top">
-    <div class="brand"><h1>Dashboard FYP Offline</h1><p>เพิ่มผลงานในหน้าเว็บได้เลย ข้อมูลเก็บในเครื่องนี้ ไม่ต้อง Git ไม่ต้อง Deploy</p></div>
-    <div class="actions">
-      <button class="secondary" onclick="exportJSON()">Export JSON</button>
-      <button class="secondary" onclick="document.getElementById('importFile').click()">Import JSON</button>
-      <input id="importFile" type="file" accept="application/json" class="hidden" onchange="importJSON(event)">
+  <div class="hero">
+    <h1>Dashboard ผลงาน FYP</h1>
+    <div class="sub">เวอร์ชันง่ายสุด: กรอกในเครื่องไหน ข้อมูลอยู่เครื่องนั้น ไม่ต้อง Git ไม่ต้อง Vercel ไม่ต้อง JSON ก็ได้</div>
+    <div class="grid">
+      <div class="card"><div class="label">FYP รวม</div><div class="value" id="kpiFyp">0</div></div>
+      <div class="card"><div class="label">จำนวนเคส</div><div class="value" id="kpiCases">0</div></div>
+      <div class="card"><div class="label">Top Seller</div><div class="value" id="kpiSeller" style="font-size:18px">-</div></div>
+      <div class="card"><div class="label">Top Branch</div><div class="value" id="kpiBranch" style="font-size:18px">-</div></div>
     </div>
-  </div>
-
-  <div class="grid">
-    <div class="card stat"><div class="label">FYP รวม</div><div class="num" id="totalFyp">0</div></div>
-    <div class="card stat"><div class="label">จำนวนเคส</div><div class="num" id="totalCases">0</div></div>
-    <div class="card stat"><div class="label">จำนวนคนขาย</div><div class="num" id="totalSellers">0</div></div>
-    <div class="card stat"><div class="label">อันดับ 1 ตอนนี้</div><div class="num" id="topSeller">-</div></div>
+    <div class="note">ข้อมูลจะบันทึกใน Browser เครื่องนี้เท่านั้น ถ้าเปิด iPad ก็ต้องกรอกใน iPad แยกกัน</div>
   </div>
 
   <div class="main">
-    <div class="card form">
+    <div class="panel">
       <h2 id="formTitle">+ เพิ่มผลงาน</h2>
       <input type="hidden" id="editId">
       <div class="row">
         <div><label>วันที่</label><input id="date" type="date"></div>
-        <div><label>FYP</label><input id="fyp" type="number" placeholder="เช่น 500000"></div>
+        <div><label>FYP</label><input id="fyp" type="number" inputmode="numeric" placeholder="เช่น 200000"></div>
       </div>
-      <label>ชื่อคนขาย</label><input id="seller" placeholder="เช่น เกสร ธนนิมิตร์">
       <label>สาขา</label><input id="branch" placeholder="เช่น สมุทรปราการ">
-      <label>สินค้า / แบบประกัน</label><input id="product" placeholder="เช่น เซฟ แอนด์ แคร์ 18/5">
-      <label>หมายเหตุ</label><textarea id="note" rows="2" placeholder="ใส่เพิ่มได้ ไม่ใส่ก็ได้"></textarea>
-      <div class="actions">
+      <label>คนขาย</label><input id="seller" placeholder="เช่น เกสร ธนนิมิตร์">
+      <label>ผลิตภัณฑ์</label><input id="product" placeholder="เช่น เซฟ แอนด์ แคร์ 18/5">
+      <div class="actions" style="margin-top:14px">
         <button onclick="saveRecord()">บันทึก</button>
         <button class="secondary" onclick="resetForm()">ล้างฟอร์ม</button>
-        <button class="danger" onclick="clearAll()">ลบข้อมูลทั้งหมด</button>
+        <button class="danger" onclick="clearAll()">ลบทั้งหมด</button>
       </div>
-      <p class="small">ข้อมูลจะบันทึกในเครื่องที่เปิดไฟล์นี้ ถ้าจะย้ายไปเครื่องอื่นให้กด Export JSON แล้วเอาไป Import ที่เครื่องนั้น</p>
+      <p class="small">ปุ่ม Export/Import มีไว้สำรองข้อมูลเท่านั้น ไม่ต้องใช้ก็ได้</p>
+      <div class="actions">
+        <button class="secondary" onclick="exportJSON()">Export สำรอง</button>
+        <button class="secondary" onclick="importFile.click()">Import สำรอง</button>
+        <input id="importFile" type="file" accept="application/json" class="hidden" onchange="importJSON(event)">
+      </div>
     </div>
 
     <div>
-      <div class="card">
+      <div class="panel">
         <div class="filters">
-          <input id="search" placeholder="ค้นหา ชื่อ/สาขา/สินค้า" oninput="render()">
-          <select id="monthFilter" onchange="render()"><option value="">ทุกเดือน</option></select>
-          <select id="sellerFilter" onchange="render()"><option value="">ทุกคน</option></select>
+          <select id="period" onchange="render()"><option value="all">สะสมทั้งหมด</option><option value="month">รายเดือน</option><option value="quarter">รายไตรมาส</option><option value="half">ครึ่งปี</option></select>
+          <select id="monthFilter" onchange="render()"></select>
+          <select id="quarterFilter" onchange="render()"><option value="Q1">Q1 ม.ค.-มี.ค.</option><option value="Q2">Q2 เม.ย.-มิ.ย.</option><option value="Q3">Q3 ก.ค.-ก.ย.</option><option value="Q4">Q4 ต.ค.-ธ.ค.</option></select>
+          <select id="halfFilter" onchange="render()"><option value="H1">H1 ม.ค.-มิ.ย.</option><option value="H2">H2 ก.ค.-ธ.ค.</option></select>
+          <input id="search" placeholder="ค้นหา คนขาย/สาขา/สินค้า" oninput="render()">
         </div>
-        <h2>อันดับคนขาย</h2>
-        <div id="sellerCards" class="sellerCards"></div>
-      </div>
-
-      <div class="card" style="margin-top:14px;overflow:auto">
-        <h2>รายการผลงาน</h2>
-        <table>
-          <thead><tr><th>วันที่</th><th>คนขาย</th><th>สาขา</th><th>สินค้า</th><th>FYP</th><th></th></tr></thead>
-          <tbody id="tbody"></tbody>
-        </table>
+        <div class="tabs">
+          <button class="tab active" data-tab="seller">Ranking คนขาย</button>
+          <button class="tab" data-tab="branch">Ranking สาขา</button>
+          <button class="tab" data-tab="detail">รายละเอียดรายสาขา</button>
+          <button class="tab" data-tab="raw">รายการทั้งหมด</button>
+        </div>
+        <section id="seller" class="active"><div class="table-wrap"><table id="sellerTable"></table></div></section>
+        <section id="branch"><div class="table-wrap"><table id="branchTable"></table></div></section>
+        <section id="detail"><div class="branch-grid" id="branchCards"></div></section>
+        <section id="raw"><div class="table-wrap"><table id="caseTable"></table></div></section>
       </div>
     </div>
   </div>
 </div>
 <script>
-const KEY='fyp_dashboard_offline_v1';
-let records = JSON.parse(localStorage.getItem(KEY) || '[]');
-function fmt(n){return Number(n||0).toLocaleString('th-TH')}
-function saveLocal(){localStorage.setItem(KEY, JSON.stringify(records));}
-function today(){return new Date().toISOString().slice(0,10)}
-document.getElementById('date').value=today();
-function saveRecord(){
-  const id=document.getElementById('editId').value;
-  const r={id:id || String(Date.now()),date:date.value || today(),seller:seller.value.trim(),branch:branch.value.trim(),product:product.value.trim(),fyp:Number(fyp.value||0),note:note.value.trim()};
-  if(!r.seller || !r.branch || !r.fyp){alert('กรอกชื่อคนขาย สาขา และ FYP ก่อน');return}
-  if(id){records=records.map(x=>x.id===id?r:x)}else{records.push(r)}
-  saveLocal(); resetForm(); render();
-}
-function resetForm(){editId.value='';formTitle.textContent='+ เพิ่มผลงาน';date.value=today();seller.value='';branch.value='';product.value='';fyp.value='';note.value=''}
-function editRecord(id){const r=records.find(x=>x.id===id); if(!r)return; editId.value=r.id; formTitle.textContent='แก้ไขผลงาน'; date.value=r.date; seller.value=r.seller; branch.value=r.branch; product.value=r.product; fyp.value=r.fyp; note.value=r.note||''; scrollTo({top:0,behavior:'smooth'});}
-function deleteRecord(id){if(confirm('ลบรายการนี้ใช่ไหม?')){records=records.filter(x=>x.id!==id);saveLocal();render();}}
-function clearAll(){if(confirm('ลบข้อมูลทั้งหมดในเครื่องนี้ใช่ไหม?')){records=[];saveLocal();render();}}
-function filtered(){let q=search.value.trim().toLowerCase(), m=monthFilter.value, s=sellerFilter.value;return records.filter(r=>(!q || [r.seller,r.branch,r.product,r.note].join(' ').toLowerCase().includes(q)) && (!m || (r.date||'').slice(0,7)===m) && (!s || r.seller===s));}
-function updateFilters(){
-  const months=[...new Set(records.map(r=>(r.date||'').slice(0,7)).filter(Boolean))].sort().reverse(); const sellers=[...new Set(records.map(r=>r.seller).filter(Boolean))].sort();
-  const cm=monthFilter.value, cs=sellerFilter.value;
-  monthFilter.innerHTML='<option value="">ทุกเดือน</option>'+months.map(x=>`<option value="${x}">${x}</option>`).join(''); monthFilter.value=cm;
-  sellerFilter.innerHTML='<option value="">ทุกคน</option>'+sellers.map(x=>`<option value="${x}">${x}</option>`).join(''); sellerFilter.value=cs;
-}
-function render(){updateFilters(); const data=filtered().sort((a,b)=>(b.date||'').localeCompare(a.date||'')); const total=data.reduce((sum,r)=>sum+Number(r.fyp||0),0); const sellers={}; data.forEach(r=>sellers[r.seller]=(sellers[r.seller]||0)+Number(r.fyp||0)); const ranking=Object.entries(sellers).sort((a,b)=>b[1]-a[1]); totalFyp.textContent=fmt(total); totalCases.textContent=data.length; totalSellers.textContent=ranking.length; topSeller.textContent=ranking[0]?ranking[0][0].split(' ')[0]:'-';
-  sellerCards.innerHTML=ranking.map(([name,amt],i)=>`<div class="card seller"><span class="rank">#${i+1}</span><h3>${name}</h3><div class="sub">FYP สะสม</div><div class="amt">${fmt(amt)}</div><div class="progress"><div class="bar" style="width:${Math.min(100,total?amt/total*100:0)}%"></div></div></div>`).join('') || '<p class="small">ยังไม่มีข้อมูล</p>';
-  tbody.innerHTML=data.map(r=>`<tr><td>${r.date||'-'}</td><td><b>${r.seller}</b></td><td><span class="pill">${r.branch}</span></td><td>${r.product||'-'}${r.note?`<div class="small">${r.note}</div>`:''}</td><td class="money">${fmt(r.fyp)}</td><td><button class="secondary" onclick="editRecord('${r.id}')">แก้</button> <button class="danger" onclick="deleteRecord('${r.id}')">ลบ</button></td></tr>`).join('') || '<tr><td colspan="6" class="small">ยังไม่มีรายการ กรอกด้านซ้ายแล้วกดบันทึก</td></tr>';
-}
-function exportJSON(){const blob=new Blob([JSON.stringify(records,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='fyp-dashboard-data.json';a.click();URL.revokeObjectURL(a.href)}
-function importJSON(e){const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=()=>{try{const arr=JSON.parse(reader.result); if(!Array.isArray(arr))throw new Error(); records=arr.map(x=>({id:x.id||String(Date.now()+Math.random()),date:x.date||today(),seller:x.seller||'',branch:x.branch||'',product:x.product||'',fyp:Number(x.fyp||0),note:x.note||''})); saveLocal(); render(); alert('Import สำเร็จ');}catch{alert('ไฟล์ JSON ไม่ถูกต้อง')}}; reader.readAsText(file); e.target.value='';}
+const KEY="fyp_dashboard_local_v2";
+let cases=JSON.parse(localStorage.getItem(KEY)||"[]");
+const fmt=n=>Number(n||0).toLocaleString("th-TH",{maximumFractionDigits:0});
+const today=()=>new Date().toISOString().slice(0,10);
+const monthNames=["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
+const monthName=ym=>{if(!ym)return"-";const [y,m]=ym.split("-");return monthNames[Number(m)-1]+" "+y};
+const quarterMonths={Q1:[1,2,3],Q2:[4,5,6],Q3:[7,8,9],Q4:[10,11,12]}, halfMonths={H1:[1,2,3,4,5,6],H2:[7,8,9,10,11,12]};
+date.value=today();
+function saveLocal(){localStorage.setItem(KEY,JSON.stringify(cases));}
+function saveRecord(){const id=editId.value;const r={id:id||String(Date.now()),date:date.value||today(),branch:branch.value.trim(),seller:seller.value.trim(),product:product.value.trim(),fyp:Number(fyp.value||0)};if(!r.date||!r.branch||!r.seller||!r.fyp){alert("กรอก วันที่ / สาขา / คนขาย / FYP ให้ครบก่อน");return} if(id){cases=cases.map(x=>x.id===id?r:x)}else{cases.push(r)} saveLocal();resetForm();render();}
+function resetForm(){editId.value="";formTitle.textContent="+ เพิ่มผลงาน";date.value=today();branch.value="";seller.value="";product.value="";fyp.value="";}
+function editRecord(id){const r=cases.find(x=>x.id===id);if(!r)return;editId.value=r.id;formTitle.textContent="แก้ไขผลงาน";date.value=r.date;seller.value=r.seller;branch.value=r.branch;product.value=r.product||"";fyp.value=r.fyp;scrollTo({top:0,behavior:"smooth"});}
+function deleteRecord(id){if(confirm("ลบรายการนี้ใช่ไหม?")){cases=cases.filter(x=>x.id!==id);saveLocal();render();}}
+function clearAll(){if(confirm("ลบข้อมูลทั้งหมดในเครื่องนี้ใช่ไหม?")){cases=[];saveLocal();render();}}
+function updateMonthOptions(){const months=[...new Set(cases.map(c=>String(c.date||"").slice(0,7)).filter(x=>x.length===7))].sort();const cur=monthFilter.value;monthFilter.innerHTML='<option value="">ทุกเดือน</option>'+months.map(m=>`<option value="${m}">${monthName(m)}</option>`).join("");monthFilter.value=months.includes(cur)?cur:"";}
+function filteredCases(){const p=period.value,mo=monthFilter.value,q=quarterFilter.value,h=halfFilter.value,s=search.value.trim().toLowerCase();return cases.filter(c=>{const m=Number(String(c.date||"").slice(5,7));if(p==="month"&&mo&&String(c.date||"").slice(0,7)!==mo)return false;if(p==="quarter"&&!quarterMonths[q].includes(m))return false;if(p==="half"&&!halfMonths[h].includes(m))return false;if(s&&![c.seller,c.branch,c.product].join(" ").toLowerCase().includes(s))return false;return true})}
+function groupBy(arr,key){const map={};arr.forEach(c=>{const k=c[key]||"-";if(!map[k])map[k]={name:k,cases:0,fyp:0,items:[]};map[k].cases++;map[k].fyp+=Number(c.fyp)||0;map[k].items.push(c)});return Object.values(map).sort((a,b)=>b.fyp-a.fyp||b.cases-a.cases||a.name.localeCompare(b.name))}
+function rankLabel(i){return i===0?"🥇 1":i===1?"🥈 2":i===2?"🥉 3":String(i+1)}
+function gap(list,i){if(i===0)return"อันดับ 1 แล้ว";return"ขาดอีก "+fmt(list[i-1].fyp-list[i].fyp+1)+" บาท"}
+function render(){updateMonthOptions();monthFilter.disabled=period.value!=="month";quarterFilter.disabled=period.value!=="quarter";halfFilter.disabled=period.value!=="half";const fc=filteredCases(), sellers=groupBy(fc,"seller"), branches=groupBy(fc,"branch"), total=fc.reduce((a,c)=>a+Number(c.fyp||0),0);kpiFyp.textContent=fmt(total)+" บาท";kpiCases.textContent=fmt(fc.length)+" เคส";kpiSeller.textContent=sellers[0]?sellers[0].name+" • "+fmt(sellers[0].fyp):"-";kpiBranch.textContent=branches[0]?branches[0].name+" • "+fmt(branches[0].fyp):"-";renderSeller(sellers);renderBranch(branches);renderCards(branches);renderCases(fc)}
+function renderSeller(sellers){sellerTable.innerHTML=`<thead><tr><th>อันดับ</th><th>คนขาย</th><th class="num">เคส</th><th class="num">FYP</th><th>ขาดอีกเท่าไหร่</th></tr></thead><tbody>`+sellers.map((x,i)=>`<tr><td class="rank">${rankLabel(i)}</td><td><b>${x.name}</b><div class="small">${[...new Set(x.items.map(v=>v.branch))].join(", ")}</div></td><td class="num">${fmt(x.cases)}</td><td class="num"><b>${fmt(x.fyp)}</b></td><td class="small">${gap(sellers,i)}</td></tr>`).join("")+`</tbody>`}
+function renderBranch(branches){branchTable.innerHTML=`<thead><tr><th>อันดับ</th><th>สาขา</th><th class="num">เคส</th><th class="num">FYP</th><th>ขาดอีกเท่าไหร่</th></tr></thead><tbody>`+branches.map((x,i)=>`<tr><td class="rank">${rankLabel(i)}</td><td><b>${x.name}</b></td><td class="num">${fmt(x.cases)}</td><td class="num"><b>${fmt(x.fyp)}</b></td><td class="small">${gap(branches,i)}</td></tr>`).join("")+`</tbody>`}
+function renderCards(branches){branchCards.innerHTML=branches.map(b=>{const sellers=groupBy(b.items,"seller");return`<div class="card"><h3>${b.name}</h3><div class="small">${fmt(b.cases)} เคส • ${fmt(b.fyp)} บาท</div>`+sellers.map((s,i)=>`<div class="seller-row"><div><b>${rankLabel(i)} ${s.name}</b><div class="small">${fmt(s.cases)} เคส</div></div><div style="text-align:right"><b>${fmt(s.fyp)}</b><div class="small">บาท</div></div></div>`).join("")+`</div>`}).join("")||'<div class="small">ยังไม่มีข้อมูล</div>'}
+function renderCases(fc){caseTable.innerHTML=`<thead><tr><th>วันที่</th><th>สาขา</th><th>คนขาย</th><th>ผลิตภัณฑ์</th><th class="num">FYP</th><th></th></tr></thead><tbody>`+fc.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).map(c=>`<tr><td>${c.date}</td><td><span class="pill">${c.branch}</span></td><td><b>${c.seller}</b></td><td>${c.product||"-"}</td><td class="num"><b>${fmt(c.fyp)}</b></td><td><button class="secondary" onclick="editRecord('${c.id}')">แก้</button> <button class="danger" onclick="deleteRecord('${c.id}')">ลบ</button></td></tr>`).join("")+`</tbody>`}
+function exportJSON(){const blob=new Blob([JSON.stringify(cases,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="fyp-dashboard-backup.json";a.click();URL.revokeObjectURL(a.href)}
+function importJSON(e){const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const arr=JSON.parse(reader.result);if(!Array.isArray(arr))throw new Error();cases=arr.map(x=>({id:x.id||String(Date.now()+Math.random()),date:x.date||today(),branch:x.branch||"",seller:x.seller||"",product:x.product||"",fyp:Number(x.fyp||0)}));saveLocal();render();alert("Import สำเร็จ");}catch{alert("ไฟล์ JSON ไม่ถูกต้อง")}};reader.readAsText(file);e.target.value="";}
+document.querySelectorAll(".tab").forEach(btn=>btn.onclick=()=>{document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));btn.classList.add("active");document.getElementById(btn.dataset.tab).classList.add("active")});
 render();
 </script>
 </body>
