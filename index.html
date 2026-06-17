@@ -8,7 +8,48 @@
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#0f172a;color:#e5e7eb}.wrap{max-width:1200px;margin:auto;padding:18px}.hero{background:linear-gradient(135deg,#1e3a8a,#111827);border:1px solid #ffffff1a;border-radius:24px;padding:24px;margin-bottom:14px}h1{margin:0 0 6px;font-size:clamp(26px,5vw,42px)}.sub{color:#cbd5e1}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.card,.panel{background:#111827;border:1px solid #ffffff17;border-radius:18px;padding:16px}.label{color:#94a3b8;font-size:13px}.value{font-weight:900;font-size:24px}.tabs{display:flex;gap:8px;flex-wrap:wrap;position:sticky;top:0;background:#0f172ae8;padding:10px 0;z-index:3}button{border:1px solid #ffffff22;background:#111827;color:#e5e7eb;border-radius:999px;padding:10px 14px;font-weight:800;cursor:pointer}button.active,.gold{background:#f59e0b;color:#111827}section{display:none}section.active{display:block}.row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}input,select{width:100%;padding:12px;border-radius:12px;border:1px solid #ffffff24;background:#0b1220;color:#fff;font-size:16px}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:11px 9px;border-bottom:1px solid #ffffff14;text-align:left}th{color:#cbd5e1;background:#ffffff08}td.num,th.num{text-align:right}.table-wrap{overflow:auto}.rank{font-weight:900;color:#fbbf24}.muted{color:#94a3b8}.note{background:#172554;border:1px solid #3b82f655;color:#dbeafe;padding:12px;border-radius:14px;margin:10px 0}.danger{background:#451a1a;border:1px solid #ef444466}.branch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.branch-card{background:#ffffff09;border:1px solid #ffffff14;border-radius:16px;padding:14px}.seller-row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #ffffff12;padding:9px 0}.seller-row:last-child{border-bottom:0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.small{font-size:13px;padding:7px 10px}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}.branch-grid{grid-template-columns:1fr}.wrap{padding:12px}table{min-width:650px}}
 </style>
 </head>
-<body>
+<<body>
+
+<div id="loginScreen" style="
+position:fixed;
+inset:0;
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+">
+  <div style="
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    width:320px;
+    text-align:center;
+    border:1px solid #374151;
+  ">
+    <h2>FYP Dashboard</h2>
+    <p style="color:#94a3b8">Enter Access Code</p>
+
+    <input
+      type="password"
+      id="accessCode"
+      placeholder="****"
+      style="
+      width:100%;
+      padding:12px;
+      margin-bottom:12px;
+      border-radius:12px;
+      border:1px solid #374151;
+      background:#0b1220;
+      color:white;
+      "
+    >
+
+    <button onclick="login()">
+      Enter
+    </button>
+  </div>
+</div>>
 <div class="wrap">
   <div class="hero">
     <h1>Dashboard ผลงาน FYP</h1>
@@ -207,6 +248,23 @@ function importData(){
 document.querySelectorAll(".tab").forEach(btn=>btn.onclick=()=>{document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));btn.classList.add("active");document.getElementById(btn.dataset.tab).classList.add("active");});
 ["period","monthFilter","quarterFilter","halfFilter","search"].forEach(id=>document.getElementById(id).addEventListener("input",render));
 render();
+function login(){
+  const code = document.getElementById("accessCode").value;
+
+  if(code === "1247"){
+    localStorage.setItem("fyp_access","ok");
+    document.getElementById("loginScreen").style.display = "none";
+  }else{
+    alert("Wrong Code");
+  }
+}
+
+if(localStorage.getItem("fyp_access")==="ok"){
+  document.addEventListener("DOMContentLoaded",()=>{
+    const login=document.getElementById("loginScreen");
+    if(login) login.style.display="none";
+  });
+}
 </script>
 </body>
 </html>
